@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class = 'pane'>
+        <div class = 'header'>
+        <h1>Weekly Bills</h1>
+        <a href="{{url_for('newWeeklyBills')}}">New Bill</a>
+        </div>
+<table id="tblMonthlyBills" class="table">
+    <tr class="trbold">
+        <th>Bill</th>
+        <th>Day Of Week</th>
+        <th>Cost</th>
+        <th></th>
+    </tr>
+{% for b in bills %}
+<tr class="trbold">
+    <td class="Bill">
+        <span>{{b.bill}}</span>
+    </td>
+    <td class="Date">
+        <span>{{b.dayOfWeek}}</span>
+    </td>
+    <td class="Cost">
+        <span>{{b.cost}}</span>
+    </td>
+
+    <td>
+        <a class="alter" href = "{{url_for('editWeeklyBills', mbid = b.id)}}">Edit</a>
+        <a class="alter" href = "{{url_for('deleteWeeklyBills', mbid = b.id)}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class = 'pane'>
+        <div class = 'header'>
+        <h1>Bring Home Pay</h1>
+        <a href="{{url_for('newBringHome')}}">New BringHome</a>
+        </div>
+<table id="tblMonthlyBills" class="table">
+    <tr class="trbold">
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Day Of Week</th>
+        <th>Frequency</th>
+        <th></th>
+    </tr>
+{% for b in bringhome %}
+<tr class="trbold">
+    <td class="Name">
+        <span>{{b.name}}</span>
+    </td>
+    <td class="Amount">
+        <span>{{b.amount}}</span>
+    </td>
+    <td class="Date">
+        <span>{{b.dayOfWeek}}</span>
+    </td>
+    <td class="Date">
+        <span>{{b.Frequency}}</span>
+    </td>
+    <td>
+        <a class="alter" href = "{{url_for('editBringHome', mbid = b.id)}}">Edit</a>
+        <a class="alter" href = "{{url_for('deleteBringHome', mbid = b.id)}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

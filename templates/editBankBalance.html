@@ -1,0 +1,13 @@
+<html>
+        <head>
+                <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+    <body>
+        <h1>Edit Bank Balance</h1>
+        <form action = "{{url_for('editBankBalance', mbid = item.id)}}" method = 'POST'>            
+            <p>bill:</p>
+            <input type = 'text' size = '30' name = 'balance', placeholder = {{item.balance}}>
+            <input type = 'submit' value = 'Edit'>
+        </form>
+    </body>
+</html>

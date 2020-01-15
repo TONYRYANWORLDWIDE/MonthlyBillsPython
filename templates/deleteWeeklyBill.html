@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <h1>Delete</h1>
+        <div>
+            <span>Are you sure you want to delete: {{item.bill}}</span>
+        </div>
+        <form action= "{{url_for('deleteWeeklyBills', mbid = item.id)}}" method ='post'>
+        <input type = 'submit', value = 'Delete'>
+        </form>
+        <a href = "{{ url_for('getWeeklyBills')}}"> Cancel </a>
+    </body>
+</html>

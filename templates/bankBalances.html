@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class = 'pane'>
+        <div class = 'header'>
+        <h1>Bank Balances</h1>
+        <a href="{{url_for('newBankBalance')}}">New Bank Balance</a>
+        </div>
+<table id="tblMonthlyBills" class="table">
+    <tr class="trbold">
+        <th>Balance</th>
+        <th>Date</th>
+        <th></th>
+    </tr>
+{% for b in balances %}
+<tr class="trbold">
+    <td class="Bill">
+        <span>{{b.KeyBalance}}</span>
+    </td>
+    <td class="Date">
+        <span>{{b.date}}</span>
+    </td>
+    <td>
+        <a class="alter" href = "{{url_for('editBankBalance', mbid = b.id)}}">Edit</a>
+        <a class="alter" href = "{{url_for('deleteBankBalance', mbid = b.id)}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,131 @@
+#tblMonthlyBills{
+    border-collapse: collapse;
+
+border: 50px solid red; 
+
+}
+table{
+    width: 100%;
+	border: 5px solid red;
+}
+th{
+    border: 5px solid black;
+}
+td{
+    border: 5px solid black;
+}
+.trbold{
+    border: 5px solid black;
+    color: white;   
+    width: 20%;
+    font-size: 1.2em;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+body {
+
+    font-family: sans-serif;
+    background-color: #414040;
+margin-right: 20%;
+margin-left: 20%;
+	position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #ffffff;
+}
+
+h1,
+h2 {
+    font-family: 'georgia', serif;
+    margin: 0;
+}
+h1 {
+    border-bottom: 2px solid #eee;
+}
+h2 {
+    font-size: 1.2em;
+}
+dd,
+dt {
+    color: #cccccc;
+}
+tr{
+    padding: 5px;
+}
+
+.item{
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #ffffff73
+}
+
+a {
+    text-decoration: none;
+    color: #ffffcc;
+    font-size: .75em;
+}
+a.new {
+
+    padding-left: 10px;
+}
+
+.pane {
+    position: absolute;
+    left: 29%;
+    right: 29%;
+    border: 3px solid;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-color: #999999;
+    background-color: #414040
+}
+.rest-list{
+    border-radius: 25px;
+}
+.header {
+    left: 50%;
+    text-align: center;
+}
+
+
+
+
+
+.description {
+    font-size: .85 em;  
+    padding-left: 5px; 
+}
+
+.price {
+    text-align: right;
+    width: 50%;
+    float: right;
+    padding-top: 10px;
+    padding-right: 5px;
+    color: yellow;
+}
+.alter{
+    float: right;
+
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.editdeletepane {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.flash {
+    background: #cee5f5;
+}
+
+/* div.auto{
+    width: auto;
+} */

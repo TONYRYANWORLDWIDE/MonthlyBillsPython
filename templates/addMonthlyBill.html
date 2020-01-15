@@ -1,0 +1,17 @@
+<html>
+        <head>
+                <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        </head>
+    <body>
+        <h1>Add New Bill</h1>
+        <form action = "{{url_for('newMonthlyBills')}}" method = 'POST'>            
+            <p>bill:</p>
+            <input type = 'text' size = '30' name = 'bill', placeholder = "Bill Name">
+            <p>cost:</p>
+            <input type = 'text' size = '30' name = 'cost' placeholder = "Cost">
+            <p>date:</p>
+            <input type = 'text' size = '30' name = 'date' placeholder = "Day Of Month">
+            <input type = 'submit' value = 'Create'>
+        </form>
+    </body>
+</html>

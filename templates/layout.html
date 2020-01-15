@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Bills App</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">            
+    </head>
+    <body>
+            {% block content %}{% endblock %}
+            <a href = '{{url_for('getMonthlyBills')}}'>Monthly Bills</a>
+            <a href = '{{url_for('getWeeklyBills')}}'>Weekly Bills</a>
+            <a href = '{{url_for('getBankBalance')}}'>Bank Balance</a>
+            <a href = '{{url_for('getBringHomePay')}}'>Bring Home Pay</a>
+    </body>
+</html>
