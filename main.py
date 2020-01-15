@@ -8,7 +8,7 @@ import json
 import urllib
 import pyodbc
 
-credentials_file = 'C:/Users/tonyr/Desktop/PlaidAPIFinal/credentials.json'
+credentials_file = 'C:/Users/tonyr/Desktop/Self Education/MonthlyBillsPython/credentials.json'
 with open(credentials_file) as json_file:
     data = json.load(json_file)
     server =   data['codes']['connectionstring']['server']
